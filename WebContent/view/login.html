@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>信息管理系统登录</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script src="../viewDesign/jqueryPropt/jquery-1.11.1.js"></script>
+<link href="../viewDesign/css/loginStyle.css" rel="stylesheet" type="text/css" media="all">
+<link href="../viewDesign/css/loginBootstrap.css" rel='stylesheet' type='text/css' media="all">
+<script src="../viewDesign/js/login_js.js"></script>
+   	 
+ 
+</head>
+<body>
+
+	<div class="header">
+		<h1>学生信息管理系统</h1>
+	</div>
+	   <form action="../ctrl/ctrl.jsp" method="post"  onsubmit="return checkUser()">
+	        <div class="banner-top">
+					<h2>填写您的登录信息</h2>
+			
+					<div class="banner-bottom">
+						
+						<div class="bnr-one">
+							<div class="bnr-left">
+								<p>角色：</p>
+							</div>
+							<div class="bnr-right">
+								<select id="selected" name="role">
+									<option  class="rm" value="admin">管理员</option>
+									<option  class="rm" value="teacher">教师</option>
+									<option  class="rm" value="student">学生</option>
+								</select>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					
+						<div class="bnr-one">
+							<div class="bnr-left">
+								<p>账号：</p>
+							</div>
+							<div class="bnr-right">
+								<input id="user" name="user" type="text" />
+								<input type="hidden" name="type" value="login" />
+							</div>
+							<div id="userError" class="error"></div>
+							<div class="clearfix"></div>
+						</div>
+						
+						<div class="bnr-one">
+							<div class="bnr-left">
+								<p>密码：</p>
+							</div>
+							<div class="bnr-right">
+								<input id="pwd" name="pwd" type="password"  />
+							</div>
+							<div id="pwdError" ></div>
+							<div class="clearfix"></div>
+						</div>
+						
+						<div class="bnr-one">
+						    <div class="bnr-left">
+							   <input id="remember" type="checkbox" name="remember" value="remember" checked="checked">&nbsp;记住密码
+						    </div>
+						    <div class="forget">
+						    	<a href="#">忘记密码？点此修改密码</a>
+						    </div>
+						    <div class="clearfix"></div>
+						    <div class="bnr-btn">
+								<input type="submit" id="login" value="登　录" />&nbsp;
+								<a target="_blank" href="register.html" id="reg" >注册账号<img src="../viewDesign/images/direc.gif" /></a>
+						    </div>
+					    </div>
+		
+	            </div>
+	        </div>
+	  </form> 
+</body>
+</html>

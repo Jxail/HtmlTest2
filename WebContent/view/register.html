@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="utf-8">
+	<title>注册页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<link rel="stylesheet" href="../viewDesign/css/regSupersized.css">
+	<link rel="stylesheet" href="../viewDesign/css/register.css">
+	<link rel="stylesheet" href="../viewDesign/css/regBootstrap.min.css" >
+	
+	<script src="../viewDesign/js/regjquery-1.8.2.min.js"></script>
+	<script src="../viewDesign/js/regSupersized.3.2.7.min.js"></script>
+    <script src="../viewDesign/js/regSupersized-init.js"></script>
+    <script src="../viewDesign/js/registerFillBox.js"></script>  
+    <script src="../viewDesign/js/regCheckUser.js"></script>
+  <!-- <script src="../viewDesign/js/registerJquery.js"></script>-->
+   
+</head>
+
+<body id="backGround">
+
+<div class="page-container">
+	<div class="main_box">
+		<div class="login_box">
+			<div class="register_title">
+				<h2>用户注册</h2>
+			</div>
+			<div class="register_form">
+				<form action="../ctrl/ctrl.jsp" id="login_form" method="post" onsubmit="return checkUser()">
+					<div class="form-group">
+						<label  class="t">用户名</label> 
+						<input id="user"  name="user" type="text" 
+						class="user form-control x319 in">
+						<input type="hidden" name="type" value="regist" />	　
+						<label id="userError">请输入用户名！</label>
+					</div>
+					
+					<div class="form-group" >
+						<label  class="t" >角　色：</label> 
+					    <select  id="role" name="role">
+							<option value="teacher">教师</option>
+							<option value="student">学生</option>
+						</select>
+					    <label id="sexError"></label>
+					</div>	
+					
+					<div class="form-group" >
+						<label  class="t" >性　别：</label> 
+						<div id="sex">
+							<input type="radio" id="boy" name="Radio" value="男" checked /><span>男</span>&nbsp;&nbsp;&nbsp;
+						    <input type="radio" id="girl" name="Radio" value="女" /><span>女</span>
+					    </div>   
+						<label id="sexError"></label>
+					</div>
+					
+					<div class="form-group">
+						<label  class="t">密　码：</label> 
+						<input id="password" value="" name="password" type="password" 
+						class="password form-control x319 in" />
+						<label id="pwdError">请输入6位数密码！</label>
+					</div>
+					
+					<div class="form-group">
+						<label  class="t">确认密码：</label> 
+						<input id="rePassword" value="" name="rePassword" type="password" 
+						class="rePassword form-control x319 in" />
+						<label id="repwdError">请再次输入密码！</label>
+					</div>
+					
+					<div class="form-group">
+						<label  class="t">邮　箱：</label> 
+						<input id="email" value="" name="email" type="text" class="form-control x319 in" 
+						autocomplete="off" />
+						<label id="emailError">请输入正确的邮箱！</label>
+					</div>
+					
+					<div class="form-group">
+						<label  class="t">籍　贯：</label> 
+						<select id="city" name = "city" onchange="changeCity()">
+						<option>---请选择省份---</option>
+						</select>
+						<select  id="area" name="area">
+						<option>---请选择城市---</option>
+						</select>
+						<label id="cityError">请选择具体省份！</label>
+					</div>
+				
+					<div class="form-group">
+						<label class="t"></label>
+						<label for="j_remember" class="m">
+						<input id="j_remember" type="checkbox" value="true">&nbsp;记住登陆账号!</label>
+						<a class="a"  target="_blank" href="login.html">返回登录！</a>
+					
+					</div>
+					
+					<div class="form-group space">
+					<button type="submit"  id="submit_btn" class="btn btn-primary btn-lg" >&nbsp;登&nbsp;录&nbsp;</button>
+					<input type="reset" value="&nbsp;重&nbsp;置&nbsp;" id="reset" class="btn btn-default btn-lg">
+					　
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
